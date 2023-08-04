@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Charlotte Nail Spa</title>  
+    
+    <!-- Include FullCalendar CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.10.2/fullcalendar.min.css" rel="stylesheet" />
+
+    <!-- Include Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <!-- Include your custom styles -->
+    <link rel="stylesheet" href="styles.css">
+    
+</head>
+<body>
+    <header class="bg-light py-4">
+        <div class="container text-center">
+            <h1>Charlotte Nail Spa</h1>
+            <p>About the Salon: [Your description here]</p>
+        </div>
+    </header>
+    
+    <main class="py-5">
+        <section id="greeting" class="container">
+            <div class="text-center">
+                <h2>Welcome to Charlotte Nail Spa</h2>
+                <p>[Greeting message here]</p>
+            </div>
+        </section>
+
+<!-- Update the "appointment" section of the HTML -->
+<section id="appointment" class="container">
+    <div class="text-center">
+        <h2>Book an Appointment</h2>
+        <button type="button" class="btn btn-primary mb-2" data-toggle="modal" data-target="#bookingModal">Book Appointment</button>
+    </div>
+    
+    <!-- Calendar view -->
+    <div id="calendar"></div>
+</section>
+
+<!-- Create the modal -->
+<div class="modal fade" id="bookingModal" tabindex="-1" role="dialog" aria-labelledby="bookingModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="bookingModalLabel">Book an Appointment</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form id="appointment-form">
+                    <div class="form-group">
+                        <label for="name">Your Name</label>
+                        <input type="text" class="form-control" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="date">Date</label>
+                        <input type="date" class="form-control" id="date" name="date" required>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label for="start_time">Start Time</label>
+                            <input type="time" class="form-control" id="start_time" name="start_time" required>
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="end_time">End Time</label>
+                            <input type="time" class="form-control" id="end_time" name="end_time" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="appointment_type">Appointment Type</label>
+                        <select class="form-control" id="appointment_type" name="appointment_type" required>
+                            <option value="">Select Appointment Type</option>
+                            <option value="manicure">Manicure</option>
+                            <option value="pedicure">Pedicure</option>
+                            <option value="waxing">Waxing</option>
+                            <option value="bio_gel">Bio Gel</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Book Appointment</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+    </main>
+
+    <footer class="bg-light py-3">
+        <div class="container text-center">
+            <p>Contact us: [Your contact information here]</p>
+        </div>
+    </footer>
+
+
+    <!-- Link to Bootstrap JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.6.0/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="script.js"></script> <!-- Your custom JavaScript -->
+
+    <!-- Include FullCalendar JavaScript dependencies -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <!-- Include FullCalendar JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.10.2/fullcalendar.min.js"></script>
+    <script src="script.js"></script> <!-- Your custom JavaScript -->
+</body>
+</html>
